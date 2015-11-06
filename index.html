@@ -24,33 +24,23 @@
 // locate you.
 
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 0
-  });
-  var infoWindow = new google.maps.InfoWindow({map: map});
 
-      var pos = {
-        lat:  29.926160,
-        lng: -93.927836
-      };
-
-      infoWindow.setPosition(pos);
-
-      var pos = {
-			lat:40.491970, lng:-74.456237
-      };
-
-      infoWindow.setPosition(pos);
-      //map.setCenter(pos);
+var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+var mapOptions = {
+  zoom: 0,
+  center: myLatlng
 }
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-                        'Error: The Geolocation service failed.' :
-                        'Error: Your browser doesn\'t support geolocation.');
-}
+var marker = new google.maps.Marker({
+    position: myLatlng,
+    title:"Hello World!"
+});
+
+// To add the marker to the map, call setMap();
+marker.setMap(map);
+
+
 
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4khgXEutDYArjJ0qEU5xOpd33ZzQH1Ok&signed_in=true&callback=initMap"
