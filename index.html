@@ -21,20 +21,52 @@
 
 function initMap() {
 
-var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
-var mapOptions = {
-  zoom: 0,
-  center: myLatlng
-}
-var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+	var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+	var mapOptions = {
+	  zoom: 0,
+	  center: myLatlng
+	}
+	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-var marker = new google.maps.Marker({
-    position: myLatlng,
-    title:"Hello World!"
-});
+	var positions = [
+		new google.maps.LatLng(29.926160, -93.927836),
+		new google.maps.LatLng(40.491970, -74.456237),
+		new google.maps.LatLng(47.505284, -117.572982),
+		new google.maps.LatLng(40.675636, -89.537484),
+		new google.maps.LatLng(64.790933, -147.545478),
+		new google.maps.LatLng(37.512923, -84.807270),
+		new google.maps.LatLng(42.245566, -71.772220),
+		new google.maps.LatLng(43.440172, -83.911788),
+		new google.maps.LatLng(32.879058, -79.975071),
+		new google.maps.LatLng(43.167825, -81.684248),
+		new google.maps.LatLng(31.183102, -83.435658),
+		new google.maps.LatLng(33.765902, -85.289821),
+		new google.maps.LatLng(34.202664, -118.886325),
+		new google.maps.LatLng(26.148376, -98.125142),
+		new google.maps.LatLng(40.893863, -78.723215),
+		new google.maps.LatLng(36.039146, -115.075032),
+		new google.maps.LatLng(38.738819, -82.840488),
+		new google.maps.LatLng(54.595587, -5.869641),
+		new google.maps.LatLng(42.426831, -83.415333),
+		new google.maps.LatLng(35.668355, -81.152257),
+		new google.maps.LatLng(43.106437, -83.693014),
+		new google.maps.LatLng(46.842411, -100.735542),
+		new google.maps.LatLng(32.698893, -117.068810),
+		new google.maps.LatLng(37.698097, -122.155823),
+		new google.maps.LatLng(40.105933, -94.004498),
+		new google.maps.LatLng(32.440951, -93.741559),
+		new google.maps.LatLng(43.846217, -79.244717),
+		new google.maps.LatLng(43.407188, -84.598820),
+		new google.maps.LatLng(35.949659, -89.982911)
+	];
 
-// To add the marker to the map, call setMap();
-marker.setMap(map);
+	for(var j = 0, l= positions.length;j<l;j++){
+	// To add the marker to the map, call setMap();
+		new google.maps.Marker({
+			position: positions[j]
+		}).setMap(map);
+	}
+
 
 
 }
