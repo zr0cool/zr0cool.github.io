@@ -19,6 +19,7 @@
     <div id="map"></div>
     <script>
 
+function initMap() {
 
 var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
 var mapOptions = {
@@ -36,7 +37,7 @@ var marker = new google.maps.Marker({
 marker.setMap(map);
 
 
-
+}
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4khgXEutDYArjJ0qEU5xOpd33ZzQH1Ok&signed_in=true&callback=initMap"
         async defer>
