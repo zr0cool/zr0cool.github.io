@@ -225,11 +225,11 @@ div[role=main] {
 }
 
 
-.life-game, .life-cell {
+.life-game {
   border: 1px solid #ccc;
   display:block;
   margin-bottom: 10px;
-  background:#111;
+	background:rgba(0,78,255,1);
 }
 .life-cell {
 	margin-bottom:0;
@@ -243,6 +243,7 @@ div[role=main] {
 	height:1000px;
 	background:#ff0000;
 }
+
 
 
 
